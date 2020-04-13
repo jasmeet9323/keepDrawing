@@ -4,23 +4,37 @@ $(document).ready(function () {
 
     ctx.strokeStyle="rgba(0,0,0,0.2)";
 
-    var width = canvas.width();
-    var height = canvas.height();
+    var canvasWidth = canvas.width();
+    var canvasHeight = canvas.height();
 
     // dimension of the drawing
     var dimension = 25;
+    var pixelSize = canvasWidth / dimension;
     var i;
-    for(i = 0; i <= width; i+=width/dimension) {
+    for(i = 0; i <= canvasWidth; i+=pixelSize) {
         ctx.beginPath();
         ctx.moveTo(i,0);
-        ctx.lineTo(i,height);
+        ctx.lineTo(i,canvasHeight);
         ctx.stroke();
     }
-    for(i=0; i <= height; i+=height/dimension) {
+    for(i=0; i <= canvasHeight; i+=pixelSize) {
         ctx.beginPath();
         ctx.moveTo(0,i);
-        ctx.lineTo(width,i);
+        ctx.lineTo(canvasWidth,i);
         ctx.stroke();
     }
 
+    canvas.on('mousemove touchmove touchstart mousedown', mouseFill);
+    function mouseFill(e) {
+        let xOffset = e.offsetX;
+        let yOffset = e.offsetY;
+
+        pixel = [Math.floor(xOffset / pixelSize), Math.floor(yOffset / pixelSize)];
+        fillPixel(pixel);        
+    }
+
+    function fillPixel(pixel) {
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(pixel[0]*(pixelSize), pixel[1]*pixelSize, pixelSize-1, pixelSize-1);
+    }    
 });
