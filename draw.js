@@ -28,7 +28,7 @@ $(document).ready(function () {
     function mouseFill(e) {
         let xOffset = e.offsetX;
         let yOffset = e.offsetY;
-
+        if(e.which!=1) return;
         pixel = [Math.floor(xOffset / pixelSize), Math.floor(yOffset / pixelSize)];
         fillPixel(pixel);        
     }
