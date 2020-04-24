@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      "@simonwep/pickr",
+      "/var/www/html/keepdrawing"
+    ]
+  ],
+  "_from": "@simonwep/pickr@latest",
+  "_hasShrinkwrap": false,
+  "_id": "@simonwep/pickr@1.5.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@simonwep/pickr",
+  "_nodeVersion": "12.14.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/pickr_1.5.1_1580917881503_0.7707264509877092"
+  },
+  "_npmUser": {
+    "email": "simon@reinisch.io",
+    "name": "simonwep"
+  },
+  "_npmVersion": "6.13.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "@simonwep/pickr",
+    "raw": "@simonwep/pickr",
+    "rawSpec": "",
+    "scope": "@simonwep",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@simonwep/pickr/-/pickr-1.5.1.tgz",
+  "_shasum": "884a82e4628f7460b7cbd73c6f9ae2f1980639c5",
+  "_shrinkwrap": null,
+  "_spec": "@simonwep/pickr",
+  "_where": "/var/www/html/keepdrawing",
+  "author": {
+    "email": "trash@reinisch.io",
+    "name": "Simon Reinisch"
+  },
+  "bugs": {
+    "url": "https://github.com/Simonwep/pickr/issues"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4"
+  },
+  "description": "Flat, Simple, Hackable Color-Picker.",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-simon": "^1.2.0",
+    "eslint-loader": "^3.0.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-fix-style-only-entries": "^0.4.0"
+  },
+  "directories": {},
+  "dist": {
+    "fileCount": 44,
+    "integrity": "sha512-BMYt5RsW7YLNrUF7Jdz1UM0E04ROD0iv/Z/c8APFb74VH0Zs3HeLiLacPgPqLx23VesL8aS6Jin/JiTmnkWujw==",
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeOuR6CRA9TVsSAnZWagAA/nIP/jlmLhDXvlB96fcwXuQL\neRe78kV+0znwgtMv+hVHvjhQOVqdodr2dXQPlPgHNHI5zXt4Y4rWdAu8hJYc\nopBKGoIhTTMHp0LNifXXW8L+CkT1sOLq2guVBkMumOjc1gjM1QsD611ZyqqC\nMV4wIbViU0nhy6eqZagNih/bsOEe+RZ4Y+j6S39/eHvd3e4Ymli5sAtO9TkB\n6Vxzag9P8+Vi7ihd2d3B9I99+Lae5lNikyE+RMSsIFX9FDGqgSyUdHWWq4/2\nPZlXZZcUKJAgPXX+84oLwR9nhnZhAM0H145T5+PIiYmvwBZ1oLkDI+oLudPo\nnrd9JWo+jhQhfvUZcUauS2uIfSpZmutj+Vjdvco56xCAw4sH5HG9D5oIYK6M\n4dsMeGDt7AjJ3kgLcwUeQcvFKLNi4WsRrzSC3m1sTpHoruIm1M2uIOALpSnc\nD8ja8LAniD2OJzwLnFqOlbUMpJukuEdJ0kSRFp5lARxF6xaUAjdAEPWpiQil\nme/Ki/cgxGFU4d7LAUd26z7Ik2K399QWoJlN0qfisulQIVl4EjtCIDMk5JOe\nxv2FdZgxTan0SZpnzGNX/3i93HRTM4wAzk6szAFt0PxWer7IIhkAQy9FLx6U\nCqpUGZR938JYWCTUxq4U6jgQzvsUUZBVFXiq+4W4eqGexF391VRi6worpFyG\nwvmL\r\n=aQA/\r\n-----END PGP SIGNATURE-----\r\n",
+    "shasum": "884a82e4628f7460b7cbd73c6f9ae2f1980639c5",
+    "tarball": "https://registry.npmjs.org/@simonwep/pickr/-/pickr-1.5.1.tgz",
+    "unpackedSize": 644754
+  },
+  "gitHead": "661773c97c9b76613835e75ac3326daaddf5a3ff",
+  "homepage": "https://github.com/Simonwep/pickr#readme",
+  "keywords": [
+    "color",
+    "color-picker",
+    "ux"
+  ],
+  "license": "MIT",
+  "main": "./dist/pickr.min.js",
+  "maintainers": [
+    {
+      "name": "simonwep",
+      "email": "toports@gmx.de"
+    }
+  ],
+  "name": "@simonwep/pickr",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simonwep/pickr.git"
+  },
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "dev": "webpack-dev-server --mode development",
+    "lint": "eslint ./src --fix",
+    "test:ts": "tsc --target ES6 --noImplicitAny --noEmit spec/ts/index.ts"
+  },
+  "typings": "./types/pickr.d.ts",
+  "version": "1.5.1"
+}
