@@ -11,8 +11,8 @@ if ($_REQUEST['submit']) {
     $filename = "temp/" . $key;
     file_put_contents($filename, $data);
     $result = trim(shell_exec("python save.py '$x' '$y' '$filename' 2>&1"));
-    if($result != 1) {
-        die("Error saving. $result<HR>"); 
+    if ($result != 1) {
+        die("Error saving. $result<HR>");
     }
     print "<script>window.location='index.php';</script>";
     return;
