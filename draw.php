@@ -1,4 +1,17 @@
-<!Doctype html>
+<?php
+
+$x = intval($_REQUEST['x']);
+$y = intval($_REQUEST['y']);
+
+if ($_REQUEST['submit']) {
+    print_r($_REQUEST);
+    return;
+}
+
+$time = time();
+
+print <<< EOF
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,13 +19,20 @@
 </head>
 
 <body>
+    <!-- script for import -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="static/draw.js"></script>
-    <script type="module" src="static/pickr/src/js/pickr.js"></script>
+    <script src="static/pickr/dist/pickr.min.js"></script>
     <div id="pickr"></div>
+
+    <!-- small canvas -->
     <canvas id="myCanvas" width="500" height="500" style="border: 1px #000 solid">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
-</body>
+    <input id=saveButton type=submit value=Save onclick="save($x, $y)">
+    <div id=spinner></div>
+    </body>
 
 </html>
+
+EOF;
