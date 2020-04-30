@@ -19,4 +19,4 @@ data = {
 
 db.collection(u'canvasApp').document(unicode(key)).set(data)
 
-print 1
+print(1)
