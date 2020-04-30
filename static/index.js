@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     canvas.mousemove(function(e) {
         let pixel = [Math.floor(e.offsetX / (pixelSize * dimension)), Math.floor(e.offsetY / (pixelSize * dimension))];
-        console.log(pixel);
+        //console.log(pixel);
         if(!selectionBox) {
             selectionBox = $("<div id=selectionBox></div>");
             selectionBox.css({width: dimension*pixelSize, height:dimension * pixelSize});
@@ -53,5 +53,6 @@ $(document).ready(function(){
 
         let pixel = [Math.floor(e.offsetX / (pixelSize * dimension)), 
         Math.floor(e.offsetY / (pixelSize * dimension))];
+        window.location = "draw.php?x=" + pixel[0] + "&y=" + pixel[1];
     }
 });

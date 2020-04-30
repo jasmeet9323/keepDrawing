@@ -6,9 +6,9 @@ $(document).ready(function () {
 
   var canvasWidth = canvas.width();
   var canvasHeight = canvas.height();
-  let selectedColor = '#222244';
+  let selectedColor = "#222244";
   let enabled = true;
-  let filled = {}
+  let filled = {};
 
   // dimension of the drawing
   var dimension = 25;
@@ -31,11 +31,15 @@ $(document).ready(function () {
   function mouseFill(e) {
     e.preventDefault(); // Disables scrolling for touch events.
 
-    var touchstart = e.type === 'touchstart' || e.type === 'touchmove';
+    var touchstart = e.type === "touchstart" || e.type === "touchmove";
     e = touchstart ? e.originalEvent : e;
     var rect = $("#mycanvas");
-    var offsetX = touchstart ? e.targetTouches[0].pageX - rect.offset().left : e.offsetX;
-    var offsetY = touchstart ? e.targetTouches[0].pageY - rect.offset().top : e.offsetY;
+    var offsetX = touchstart
+      ? e.targetTouches[0].pageX - rect.offset().left
+      : e.offsetX;
+    var offsetY = touchstart
+      ? e.targetTouches[0].pageY - rect.offset().top
+      : e.offsetY;
 
     if (!enabled) return;
     if (e.which != 1 && !touchstart) return;
@@ -56,7 +60,7 @@ $(document).ready(function () {
     );
   }
 
-  const pickr = Pickr.create({
+  const PICKR = Pickr.create({
     el: "#pickr",
     theme: "classic", // or 'monolith', or 'nano'
 
@@ -95,6 +99,21 @@ $(document).ready(function () {
         save: true,
       },
     },
+  });
+
+  PICKR.on("init", function () {
+    PICKR.setColor(selectedColor);
+  });
+  PICKR.on("show", function () {
+    enabled = false;
+  });
+  PICKR.on("hide", function () {
+    setTimeout(function () {
+      enabled = true;
+    }, 300);
+  });
+  PICKR.on("change", function () {
+    selectedColor = PICKR.getColor().toHEXA().toString();
   });
 
   window.save = function (x, y) {

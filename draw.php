@@ -4,7 +4,17 @@ $x = intval($_REQUEST['x']);
 $y = intval($_REQUEST['y']);
 
 if ($_REQUEST['submit']) {
-    print_r($_REQUEST);
+    $data = $_POST['data'];
+    $data = json_encode($data);
+
+    $key = "$x,$y";
+    $filename = "temp/" . $key;
+    file_put_contents($filename, $data);
+    $result = trim(shell_exec("python save.py '$x' '$y' '$filename' 2>&1"));
+    if($result != 1) {
+        die("Error saving. $result<HR>"); 
+    }
+    print "<script>window.location='index.php';</script>";
     return;
 }
 
