@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     var touchstart = e.type === "touchstart" || e.type === "touchmove";
     e = touchstart ? e.originalEvent : e;
-    var rect = $("#mycanvas");
+    var rect = $("#myCanvas");
     var offsetX = touchstart
       ? e.targetTouches[0].pageX - rect.offset().left
       : e.offsetX;
@@ -133,4 +133,5 @@ $(document).ready(function () {
       $("#saveButton").attr("disabled", false);
     });
   };
+  window.PICKR = PICKR;
 });
