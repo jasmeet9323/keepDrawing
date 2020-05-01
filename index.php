@@ -40,6 +40,13 @@
     <!-- My script -->
     <script src="static/index.js"></script>
 
+    <!-- Header -->
+    <div id="header">
+        <h2>My Million Dollar WebPage!</h2>
+        <h3>Select a block and draw in it. Have fun!</h3>
+        <p>Created by <a href="https://jasmeet9323.github.io">Jasmeet Singh</a></p>
+    </div>
+
     <!-- Canvas -->
     <div id="bigCanvasWrapper">
         <canvas id="bigCanvas" width="800" height="800" style="border: 1px #000 solid"></canvas>

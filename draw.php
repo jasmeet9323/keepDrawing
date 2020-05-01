@@ -2,9 +2,7 @@
 
 $x = intval($_REQUEST['x']);
 $y = intval($_REQUEST['y']);
-
-$submit = isset($_REQUEST['submit']);
-
+$_REQUEST['submit'] = isset($_REQUEST['submit']) ? $_REQUEST['submit'] : '';
 if ($_REQUEST['submit']) {
     $data = $_POST['data'];
     $data = json_encode($data);
