@@ -86,18 +86,26 @@ $(document).ready(function () {
       Math.floor(e.offsetX / (pixelSize * dimension)),
       Math.floor(e.offsetY / (pixelSize * dimension)),
     ];
+    if (
+      pixel[0] < 0 ||
+      pixel[1] < 0 ||
+      pixel[0] >= repeatX ||
+      pixel[1] >= repeatY
+    ) {
+      return;
+    }
     //console.log(pixel);
     if (!selectionBox) {
       selectionBox = $("<div id=selectionBox></div>");
       selectionBox.css({
-        width: dimension * pixelSize,
-        height: dimension * pixelSize,
+        width: dimension * pixelSize - 2,
+        height: dimension * pixelSize - 2,
       });
       $("#bigCanvasWrapper").prepend(selectionBox);
     }
     selectionBox.css({
       left: pixel[0] * pixelSize * dimension + 1,
-      top: pixel[1] * pixelSize * dimension + 1,
+      top: pixel[1] * pixelSize * dimension,
     });
   });
 
