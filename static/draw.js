@@ -10,10 +10,12 @@ $(document).ready(function () {
   let enabled = true;
   let filled = {};
 
-  // dimension of the drawing
+  // Dimension of the drawing
   var dimension = 25;
   var pixelSize = canvasWidth / dimension;
   var i;
+
+  // Draw grid lines
   for (i = 0; i <= canvasWidth; i += pixelSize) {
     ctx.beginPath();
     ctx.moveTo(i, 0);
@@ -27,6 +29,7 @@ $(document).ready(function () {
     ctx.stroke();
   }
 
+  // Capture mouse or touch and draw with selected color
   canvas.on("mousemove touchmove touchstart mousedown", mouseFill);
   function mouseFill(e) {
     e.preventDefault(); // Disables scrolling for touch events.
@@ -48,6 +51,7 @@ $(document).ready(function () {
     fillPixel(pixel);
   }
 
+  // Fill the pixel while drawing
   function fillPixel(pixel) {
     key = pixel[0] + "," + pixel[1];
     filled[key] = selectedColor;
@@ -60,6 +64,7 @@ $(document).ready(function () {
     );
   }
 
+  // 
   const PICKR = Pickr.create({
     el: "#pickr",
     theme: "classic", // or 'monolith', or 'nano'
@@ -84,8 +89,8 @@ $(document).ready(function () {
     components: {
       // Main components
       preview: true,
-      opacity: true,
-      hue: true,
+      //opacity: true,
+      //hue: true,
 
       // Input / output Options
       interaction: {
