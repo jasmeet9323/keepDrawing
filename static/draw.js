@@ -64,37 +64,6 @@ $(document).ready(function () {
     );
   }
 
-  function changeToWhite(data) {
-    for (var i = 0; i < data.length; i++) {
-      data[i] = 255;
-    }
-  }
-
-  var button = document.getElementById('reset');
-  button.addEventListener('click', resetDrawing);
-  function resetDrawing() {
-    var imageData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
-
-    changeToWhite(imageData.data);
-
-    // Update the canvas with the new data
-    ctx.putImageData(imageData, 0, 0);
-
-    // Draw grid lines
-    for (i = 0; i <= canvasWidth; i += pixelSize) {
-      ctx.beginPath();
-      ctx.moveTo(i, 0);
-      ctx.lineTo(i, canvasHeight);
-      ctx.stroke();
-    }
-    for (i = 0; i <= canvasHeight; i += pixelSize) {
-      ctx.beginPath();
-      ctx.moveTo(0, i);
-      ctx.lineTo(canvasWidth, i);
-      ctx.stroke();
-    }
-  }
-
   //
   const PICKR = Pickr.create({
     el: "#pickr",

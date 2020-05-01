@@ -50,9 +50,6 @@ print <<< EOF
         <div style="padding-left: 1em;">
             <button type="button" value="choose color" onclick="PICKR.show()">Choose Color</button>
         </div>
-        <div id="reset" style="padding-left: 3em">
-            <button type="button" value="reset">Reset</button>
-        </div>
     </div>  
 
     <!-- Small canvas -->
